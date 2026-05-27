@@ -4,7 +4,6 @@
 import fs from "fs";
 import path from "path";
 
-// ⬇️ import.meta 오류를 방지하기 위해 일반 노드 경로 문법으로 대체했습니다.
 const __dirname = path.resolve();
 
 describe("계산기 UI 통합", () => {
@@ -35,11 +34,18 @@ describe("계산기 UI 통합", () => {
         expect(document.querySelector('[data-testid="display"]').textContent).toBe("0");
     });
 
-    // 빼기 버튼 기능 검증 통합 테스트
     test("빼기 버튼이 두 입력값을 빼서 display에 표시한다", () => {
         document.getElementById("inputA").value = "10";
         document.getElementById("inputB").value = "8";
         document.querySelector('[data-testid="btn-subtract"]').click();
         expect(document.querySelector('[data-testid="display"]').textContent).toBe("2");
+    });
+
+    // ⬇️ 곱하기 버튼 기능 검증 통합 테스트가 새로 추가되었습니다!
+    test("곱하기 버튼이 두 입력값을 곱해서 display에 표시한다", () => {
+        document.getElementById("inputA").value = "2";
+        document.getElementById("inputB").value = "9";
+        document.querySelector('[data-testid="btn-multiply"]').click();
+        expect(document.querySelector('[data-testid="display"]').textContent).toBe("18");
     });
 });
