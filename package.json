@@ -10,5 +10,8 @@
     "test:unit": "jest tests/unit",
     "test:integration": "jest tests/integration",
     "test": "jest"
+  },
+  "devDependencies": {
+    "...": "npm install이 자동으로 채움"
   }
 }
