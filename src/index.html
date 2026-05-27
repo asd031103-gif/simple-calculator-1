@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>간단 계산기</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <main class="calculator">
+        <h1>간단 계산기</h1>
+        <div class="display" data-testid="display">0</div>
+
+        <div class="inputs">
+            <label>A: <input type="number" id="inputA" data-testid="inputA" step="any" /></label>
+            <label>B: <input type="number" id="inputB" data-testid="inputB" step="any" /></label>
+        </div>
+
+        <div class="buttons">
+            <button type="button" data-op="add" data-testid="btn-add">＋ 더하기</button>
+        </div>
+
+        <button type="button" id="clear" data-testid="btn-clear" class="clear">초기화</button>
+    </main>
+
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>
